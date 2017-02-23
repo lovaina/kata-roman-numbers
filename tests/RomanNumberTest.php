@@ -56,6 +56,48 @@ class RomanNumberTest extends \PHPUnit_Framework_TestCase
 		$this->assertEquals('X', $roman->getNumber());
 	}
 
+	public function test_50_is_L(){
+
+		$roman = new RomanNumber(50);
+
+		$this->assertEquals('L', $roman->getNumber());
+	}
+
+	public function test_60_is_LX(){
+
+		$roman = new RomanNumber(60);
+
+		$this->assertEquals('LX', $roman->getNumber());
+	}
+
+	public function test_100_is_C(){
+
+		$roman = new RomanNumber(100);
+
+		$this->assertEquals('C', $roman->getNumber());
+	}
+
+	public function test_500_is_D(){
+
+		$roman = new RomanNumber(500);
+
+		$this->assertEquals('D', $roman->getNumber());
+	}
+
+	public function test_1000_is_M(){
+
+		$roman = new RomanNumber(1000);
+
+		$this->assertEquals('M', $roman->getNumber());
+	}
+
+	public function test_1215_is_MCCXV(){
+
+		$roman = new RomanNumber(1215);
+
+		$this->assertEquals('MCCXV', $roman->getNumber());
+	}
+
 }
 
 ?>
