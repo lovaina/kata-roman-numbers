@@ -28,6 +28,13 @@ class RomanNumberTest extends \PHPUnit_Framework_TestCase
 		$this->assertEquals('III', $roman->getNumber());
 	}
 
+	public function test_4_is_IV(){
+
+		$roman = new RomanNumber(4);
+
+		$this->assertEquals('IV', $roman->getNumber());
+	}
+
 	public function test_5_is_V(){
 
 		$roman = new RomanNumber(5);
@@ -47,6 +54,13 @@ class RomanNumberTest extends \PHPUnit_Framework_TestCase
 		$roman = new RomanNumber(8);
 
 		$this->assertEquals('VIII', $roman->getNumber());
+	}
+
+	public function test_9_is_IX(){
+
+		$roman = new RomanNumber(9);
+
+		$this->assertEquals('IX', $roman->getNumber());
 	}
 
 	public function test_10_is_X(){
