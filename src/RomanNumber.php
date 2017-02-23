@@ -6,6 +6,12 @@ class RomanNumber
 {
 	protected $number;
 
+	protected $table = [
+		10 => 'X',
+		5 => 'V',
+		1 => 'I'
+	];
+
 	function __construct($number)
 	{
 		$this->number = $number;
@@ -13,19 +19,18 @@ class RomanNumber
 
 	public function getNumber()
 	{
-		$roman = '';
-        while ($this->number >= 5) {
-        	$roman = $roman.'V';
-        	$this->number = $this->number - 5;
-        }
+		$romanized = '';
 
-		while ($this->number >= 1) {
-			$roman = $roman.'I';
-			$this->number = $this->number - 1;
+		foreach ($this->table as $numeral => $roman) {
+				while ($this->number >= $numeral) {
+					$romanized = $romanized.$roman;
+					$this->number = $this->number - $numeral;
+				}
 		}
 
-		return $roman;
+		return $romanized;
 	}
+
 }
 
  ?>
