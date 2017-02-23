@@ -28,7 +28,14 @@ class RomanNumberTest extends \PHPUnit_Framework_TestCase
 		$this->assertEquals('III', $roman->getNumber());
 	}
 
-	
+	public function test_5_is_V(){
+
+		$roman = new RomanNumber(5);
+
+		$this->assertEquals('V', $roman->getNumber());
+	}
+
+
 
 }
 
