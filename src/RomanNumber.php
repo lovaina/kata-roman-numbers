@@ -2,9 +2,6 @@
 
 namespace Kata;
 
-/**
-* 
-*/
 class RomanNumber
 {
 	protected $number;
@@ -16,7 +13,13 @@ class RomanNumber
 
 	public function getNumber()
 	{
-		return 'I';
+		$roman = '';
+		while ($this->number >= 1) {
+			$roman = $roman.'I';
+			$this->number = $this->number - 1;
+		}
+
+		return $roman;
 	}
 }
 
